@@ -13,6 +13,7 @@ from testfixtures import LogCapture
 from common.djangoapps.student.tests.factories import UserFactory
 from lms.djangoapps.grades.models import PersistentCourseGrade
 from openedx.core.djangoapps.catalog.tests.factories import CourseFactory, CourseRunFactory, ProgramFactory
+from openedx.features.enterprise_support.tests.factories import EnterpriseCustomerUserFactory
 
 LOG_PATH = 'lms.djangoapps.program_enrollments.management.commands.send_program_course_nudge_email'
 
@@ -32,6 +33,8 @@ class TestSendProgramCourseNudgeEmailCommand(TestCase):
         super().setUp()
         self.user_1 = UserFactory()
         self.user_2 = UserFactory()
+
+        self.enterprise_customer_user = EnterpriseCustomerUserFactory.create(user_id=self.user_1.id)
 
         self.enrolled_course_run = CourseRunFactory()
         self.course_run_1 = CourseRunFactory()
