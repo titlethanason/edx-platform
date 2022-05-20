@@ -493,7 +493,8 @@ class SequenceBlock(
                 prereq_met, prereq_meta_info = self._compute_is_prereq_met(True)
         if prereq_met:
             if self.is_ticketed:
-                if not self.validate_ticket(self.ticket):
+                ticket = context.get("ticket", None)
+                if not self.validate_ticket(ticket):
                     return Fragment() #or whatever, the point is don't continue
             special_html_view = self._hidden_content_student_view(context) or self._special_exam_student_view()
             if special_html_view:
