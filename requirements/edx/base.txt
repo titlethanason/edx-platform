@@ -163,7 +163,7 @@ defusedxml==0.7.1
     #   social-auth-core
 deprecated==1.2.13
     # via jwcrypto
-django==3.2.10
+django==3.2.13
     # via
     #   -c requirements/edx/../constraints.txt
     #   -r requirements/edx/base.in
@@ -461,7 +461,7 @@ edx-opaque-keys[django]==2.2.2
     #   xmodule
 edx-organizations==6.10.0
     # via -r requirements/edx/base.in
-edx-proctoring==4.7.1
+edx-proctoring @ git+https://github.com/innosoft-mis/edx-proctoring@learnai
     # via
     #   -r requirements/edx/base.in
     #   edx-proctoring-proctortrack
