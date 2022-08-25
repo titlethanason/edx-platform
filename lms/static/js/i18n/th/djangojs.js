@@ -4,7 +4,7 @@
 
   var django = globals.django || (globals.django = {});
 
-  
+
   django.pluralidx = function(n) {
     var v=0;
     if (typeof(v) == 'boolean') {
@@ -13,12 +13,12 @@
       return v;
     }
   };
-  
+
 
   /* gettext library */
 
   django.catalog = django.catalog || {};
-  
+
   var newcatalog = {
     "%(cohort_name)s (%(user_count)s)": "%(cohort_name)s (%(user_count)s)",
     "%(new_item_message)s": "%(new_item_message)s",
@@ -621,7 +621,7 @@
     "View Cohort": "\u0e14\u0e39\u0e01\u0e25\u0e38\u0e48\u0e21",
     "View all errors": "\u0e14\u0e39\u0e02\u0e49\u0e2d\u0e1c\u0e34\u0e14\u0e1e\u0e25\u0e32\u0e14\u0e17\u0e31\u0e49\u0e07\u0e2b\u0e21\u0e14",
     "Viewing %s course": [
-      "\u0e01\u0e32\u0e23\u0e0a\u0e21 %s \u0e23\u0e32\u0e22\u0e27\u0e34\u0e0a\u0e32"
+      "%s \u0e01\u0e32\u0e23\u0e23\u0e31\u0e1a\u0e23\u0e2d\u0e07\u0e2a\u0e21\u0e23\u0e23\u0e16\u0e19\u0e30"
     ],
     "Warning": "\u0e04\u0e33\u0e40\u0e15\u0e37\u0e2d\u0e19",
     "Warnings": "\u0e04\u0e33\u0e40\u0e15\u0e37\u0e2d\u0e19",
@@ -725,7 +725,7 @@
   for (var key in newcatalog) {
     django.catalog[key] = newcatalog[key];
   }
-  
+
 
   if (!django.jsi18n_initialized) {
     django.gettext = function(msgid) {
