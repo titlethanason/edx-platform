@@ -44,8 +44,8 @@
 
             showFoundMessage: function(count) {
                 var msg = ngettext(
-                'Viewing %s course',
-                'Viewing %s courses',
+                '%s การรับรองสมรรถนะ',
+                '%s การรับรองสมรรถนะ',
                 count
             );
                 this.$message.html(interpolate(msg, [count]));

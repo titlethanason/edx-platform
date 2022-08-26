@@ -3385,7 +3385,7 @@ msgstr ""
 #, javascript-format
 msgid "Viewing %s course"
 msgid_plural "Viewing %s courses"
-msgstr[0] "การชม %s รายวิชา"
+msgstr[0] "%s การรับรองสมรรถนะ"
 
 #: lms/static/js/discovery/views/search_form.js
 #, javascript-format
